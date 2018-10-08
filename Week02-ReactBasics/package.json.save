@@ -1,0 +1,43 @@
+{
+  "name": "week02-reactbasics",
+  "version": "1.0.0",
+  "main": "npm start",
+  "scripts": {
+    "start": "webpack-dev-server --port=30025 --mode=development",
+sudo apt-get install geany
+sudo apt-get install meld
+sudo apt-get install chromium-browser
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sukhmani/isit320-thukral-2018.git"
+  },
+  "keywords": [
+    "react",
+    "system"
+  ],
+  "author": "Sukhmani t",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sukhmani/isit320-thukral-2018/issues"
+  },
+  "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1"
+  },
+  "description": ""
+}
