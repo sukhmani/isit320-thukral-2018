@@ -1,10 +1,11 @@
 {
   "name": "isit320-thukral-2018",
   "version": "1.0.0",
-  "description": "I wrote this in class.",
+  "description": "I wrote this in class. I wrote! I did this on Friday",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  
+  "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/sukhmani/isit320-thukral-2018/issues"
   },
-  "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme",
-  "dependencies": {
-    "aws-sdk": "^2.329.0"
-  }
+  "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme"
 }
