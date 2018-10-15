@@ -1,0 +1,9 @@
+#! /bin/bash
+
+function copyService() {
+    sudo cp -v eip.service /etc/systemd/system/.
+    sudo systemctl enable eip.service
+    sudo systemctl start eip.service
+}
+
+./mod-service $1 && copyService
