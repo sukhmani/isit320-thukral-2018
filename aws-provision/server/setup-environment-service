@@ -10,8 +10,8 @@ NC='\033[0m' # No Color
 
 # You must define the following two environment variables.
 # Then run: source setup-environment-service
-export SYSTEMD_PROJECT_NAME=eip
-export DESCRIPTION="Run Elven Code"
+export SYSTEMD_PROJECT_NAME=awsprov
+export DESCRIPTION="Run AWS Provision"
 
 # This export does not need to be edited. It is derived from the lines above.
 export SERVICE_FILE=$SYSTEMD_PROJECT_NAME.service

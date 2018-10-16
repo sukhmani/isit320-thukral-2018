@@ -2,14 +2,14 @@
 Description=Run Elven Code
 
 [Service]
-ExecStart=/home/bcuser/npm/bin/npm run start-service
-WorkingDirectory=/home/bcuser/bin/eip
+ExecStart=/home/ubuntu/npm/bin/npm run start-service
+WorkingDirectory=/home/ubuntu/bin/eip
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=eip
-User=bcuser
-Group=bcuser
+User=ubuntu
+Group=ubuntu
 Environment=NODE_ENV=production
 Environment=PORT=30200
 

@@ -1,4 +1,4 @@
 #! /bin/bash
 
-sudo systemctl stop eip.service
-sudo systemctl disable eip.service
+sudo systemctl stop awsprov.service
+sudo systemctl disable awsprov.service
