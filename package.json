@@ -15,5 +15,7 @@
   "bugs": {
     "url": "https://github.com/sukhmani/isit320-thukral-2018/issues"
   },
-  "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme"
+  "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }
