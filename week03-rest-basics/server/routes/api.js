@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+import { Router } from 'express';
+var router = Router();
 
 /* Set up a route called foo. */
 router.get('/foo', function(request, response) {
@@ -8,4 +8,4 @@ router.get('/foo', function(request, response) {
     response.send(message);
 });
 
-module.exports = router;
+export default router;
