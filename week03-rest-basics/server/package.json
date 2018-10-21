@@ -5,6 +5,9 @@
   "scripts": {
     "start": "nodemon ./bin/www"
   },
+  
+  "proxy": "http://localhost:30026",
+
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
