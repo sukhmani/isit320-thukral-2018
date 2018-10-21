@@ -3,6 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  copyFile = () =>{
+
+    fetch('/script-pusher/remove-known-host')
+    .then(function(response)
+    {return response.json();
+    })
+    .then(function(json){
+      console.log('parsed json', json);
+    })
+    .catch(function(ex){
+      console.log('parsing failed, URL bad, network down, or similar', ex);
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -10,7 +25,7 @@ class App extends Component {
           <h1> Copy File </h1> 
         </header>
         <main>
-          <button onClick={this.CopyFile}> Copy File </button>
+          <button onClick={this.copyFile}> Copy File </button>
         </main>
         <footer>
           <p>&Copy; by Sukhmani</p>
