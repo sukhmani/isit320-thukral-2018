@@ -7,7 +7,7 @@
     "start": "nodemon ./bin/www",
     "start-service": "node ./bin/www"
   },
-  "author": "",
+  "author": "Sukhmanit",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
