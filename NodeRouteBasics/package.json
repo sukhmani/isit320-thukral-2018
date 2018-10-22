@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "nodeRouteBasics",
   "main": "index.js",
-  
-    "scripts": {
-  "start": "nodemon ./bin/www",
-  "start-service": "node ./bin/www"
-},
-  
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "start-service": "node ./bin/www"
+  },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
 }
