@@ -29,7 +29,7 @@ var instanceParams = {
     ImageId: 'ami-0ac019f4fcb7cb7e6',
     InstanceType: 't2.micro',
     KeyName: 'new.pem',
-    SecurityGroupIds: ['sg-0343e3be157db8175'],
+    SecurityGroupIds: ['sg-05c1ab3db8f883945'],
     MinCount: 1,
     MaxCount: 1
 };
