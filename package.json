@@ -16,6 +16,8 @@
     "url": "https://github.com/sukhmani/isit320-thukral-2018/issues"
   },
   "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme",
-  "dependencies": {},
+  "dependencies": {
+    "concur": "^3.2.0"
+  },
   "devDependencies": {}
 }
