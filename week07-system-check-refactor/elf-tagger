@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+
+if [[ -z $1 ]]; then
+    echo -e "You must pass in one parameter"
+    exit
+fi
