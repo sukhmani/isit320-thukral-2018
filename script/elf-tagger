@@ -36,13 +36,13 @@ TAG_STRING="$1 for $2 on branch `git_branch` with tag ${TAG_VERSION}."
 echo $TAG_STRING
 
 function push_tag(){
-git status
-git add .
-git commit -m "${TAG_STRING} $NOW"
-git push --set-upstream origin ${BRANCH}
+	git status
+	git add .
+	git commit -m "${TAG_STRING} $NOW"
+	git push --set-upstream origin ${BRANCH}
 
-git tag -a "${TAG_VERSON}" -m "${TAG_STRING}"
-git push origin "${TAG_VERSION}"
+	#git tag -a "${TAG_VERSON}" -m "${TAG_STRING}"
+	#git push origin "${TAG_VERSION}"
 }
 
 push_tag
