@@ -43,6 +43,6 @@ git push --set-upstream origin ${BRANCH}
 
 git tag -a "${TAG_VERSON}" -m "${TAG_STRING}"
 git push origin "${TAG_VERSION}"
-
 }
+
 push_tag
