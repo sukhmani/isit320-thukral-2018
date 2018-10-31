@@ -4,7 +4,9 @@
   "description": "I wrote this in class.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,15 @@
     "url": "https://github.com/sukhmani/isit320-thukral-2018/issues"
   },
   "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "react-styleguidist": "^8.0.2"
+  },
+  "devDependencies": {
+    "@storybook/react": "^4.0.1",
+    "@storybook/addon-actions": "^4.0.1",
+    "@storybook/addon-links": "^4.0.1",
+    "@storybook/addons": "^4.0.1",
+    "@babel/core": "^7.1.2",
+    "babel-loader": "^8.0.4"
+  }
 }
