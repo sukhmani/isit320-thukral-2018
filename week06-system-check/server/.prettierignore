@@ -5,4 +5,4 @@
 **/bower_components/**
 **/coverage/**
 service-worker.js
-preache-manifest.*.js
+preache-manifest*.js
