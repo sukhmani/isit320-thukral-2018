@@ -10,8 +10,8 @@ Restart=always
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=nrb
-User=bcuser
-Group=bcuser
+User=ubuntu
+Group=ubuntu
 Environment=NODE_ENV=production
 Environment=NRB_PORT=30026
 
