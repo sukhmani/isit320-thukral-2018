@@ -1,12 +1,11 @@
 {
   "name": "noderoutebasics",
   "version": "1.0.0",
-  "description": "npm init - package.json for systemd -nrb",
+  "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "nodemon ./bin/www",
-  "start-service": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "sukhmani",
-  "license": "MIT"
+  "author": "",
+  "license": "ISC"
 }
