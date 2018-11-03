@@ -1,0 +1,17 @@
+[Unit]
+Description=Run Elven Code
+
+[Service]
+ExecStart=/home/ubuntu/npm/bin/npm run start-service
+WorkingDirectory=/home/ubuntu/bin/awsprov
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=awsprov
+User=ubuntu
+Group=ubuntu
+Environment=NODE_ENV=production
+Environment=SERVER_PORT=30026
+
+[Install]
+WantedBy=multi-user.target
