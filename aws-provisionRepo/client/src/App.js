@@ -16,6 +16,34 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+            buttons:[{
+                id: 1,
+                name:queryServer,
+            },
+                {
+                    id:2,
+                    name:createEducate,
+                },
+                {
+                    id:3,
+                    name:createWithAwsStandardAccount,
+                },
+                {
+                    id:4,
+                    name:associateElasticIp,
+                },
+                {
+                    id:5,
+                    name:copyGetStarted,
+                },
+                {
+                    id:6,
+                    name:runGetStarted,
+                },
+                {
+                    id:7,
+                    name:removeKnownHost,
+                }],
             file: 'File name will be placed here.',
             status: 'waiting for server'
         };
