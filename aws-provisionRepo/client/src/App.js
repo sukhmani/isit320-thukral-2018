@@ -4,6 +4,15 @@ import './App.css';
 import 'whatwg-fetch';
 
 class App extends Component {
+    queryServer(){}
+    createEducate(){}
+    createWithAwsStandardAccount(){}
+    associateElasticIp(){}
+    copyGetStarted(){}
+    runGetStarted(){}
+    removeKnownHost(){}
+
+
     constructor() {
         super();
         this.state = {
