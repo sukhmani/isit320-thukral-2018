@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) { 'use strict';
 });
 
 /* Set up a route called foo. */
-router.get('/create-educate', function(request, response) {
+router.get('/awsEducate', function(request, response) {
   const awsInstanceParams = getAwsInstanceParams.awsEducate();
   createInstance(awsInstanceParams);
     //response.send(message);
