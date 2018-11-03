@@ -39,7 +39,12 @@ class App extends Component {
                     state: {this.state.status} file: {this.state.file}
                 </p>
                 <button onClick={this.queryServer}>Bar</button>
-                <button onClick={this.queryServer}>a</button>
+                <button onClick={this.queryServer}>Create with AWS Educate Account</button>
+                <button onClick={this.queryServer}>Create with AWS Standard Account</button>
+                <button onClick={this.queryServer}>Associate Elastic Ip</button>
+                <button onClick={this.queryServer}>Copy the GetStarted Script</button>
+                <button onClick={this.queryServer}>Run the GetStarted Script</button>
+                <button onClick={this.queryServer}>Remove from KnownHost</button>
             </div>
         );
     }
