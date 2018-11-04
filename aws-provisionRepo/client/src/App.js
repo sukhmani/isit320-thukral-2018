@@ -4,13 +4,7 @@ import './App.css';
 import 'whatwg-fetch';
 
 class App extends Component {
-    queryServer(){}
-    createEducate(){}
-    createWithAwsStandardAccount(){}
-    associateElasticIp(){}
-    copyGetStarted(){}
-    runGetStarted(){}
-    removeKnownHost(){}
+
 
 
     constructor() {
@@ -49,6 +43,78 @@ class App extends Component {
         };
     }
 
+    createEducate() =>{const that = this;
+    fetch('/createEducate')
+.then(function(response) {
+        return response.json();
+    })
+.then(function(json) {
+        console.log('parsed json', json);
+        that.setState(foo => (json));
+    })
+.catch(function(ex) {
+        console.log('parsing failed, URL bad, network down, or similar', ex);
+    });}
+    createWithAwsStandardAccount()=>{const that = this;
+    fetch('/createWithAwsStandardAccount')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log('parsed json', json);
+            that.setState(foo => (json));
+        })
+        .catch(function(ex) {
+            console.log('parsing failed, URL bad, network down, or similar', ex);
+        });}
+    associateElasticIp()=>{const that = this;
+    fetch('/associateElasticIp')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log('parsed json', json);
+            that.setState(foo => (json));
+        })
+        .catch(function(ex) {
+            console.log('parsing failed, URL bad, network down, or similar', ex);
+        });}
+    copyGetStarted()=>{const that = this;
+    fetch('/copyGetStarted')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log('parsed json', json);
+            that.setState(foo => (json));
+        })
+        .catch(function(ex) {
+            console.log('parsing failed, URL bad, network down, or similar', ex);
+        });}
+    runGetStarted()=>{const that = this;
+    fetch('/runGetStarted')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log('parsed json', json);
+            that.setState(foo => (json));
+        })
+        .catch(function(ex) {
+            console.log('parsing failed, URL bad, network down, or similar', ex);
+        });}
+    removeKnownHost()=>{const that = this;
+    fetch('/removeKnownHost')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log('parsed json', json);
+            that.setState(foo => (json));
+        })
+        .catch(function(ex) {
+            console.log('parsing failed, URL bad, network down, or similar', ex);
+        });}
     queryServer = () => {
         const that = this;
         fetch('/foo')
