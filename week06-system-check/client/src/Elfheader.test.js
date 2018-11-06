@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+
 import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import elfDebugEnzyme from './ElfDebugEnzyme';
+import Elfheader from './Elfheader';
 
 configure({ adapter: new Adapter() });
 
@@ -11,16 +12,15 @@ describe('rest basic tests', function() {
 
     it('renders without crashing', () => {
         const div = document.createElement('div');
-        ReactDOM.render(<App/>, div);
+        ReactDOM.render(<Elfheader/>, div);
     });
-    fit('renders h1 header test', () => {
-        const wrapper = shallow(<App/>);
+    it('renders h1 header test', () => {
+        const wrapper = shallow(<Elfheader/>);
         console.log('Tester',wrapper.find('h1').debug());
     });
-    fit('renders h1 header test', () => {
-        const wrapper = shallow(<App/>);
+    it('renders h1 header test', () => {
+        const wrapper = shallow(<Elfheader/>);
         const unknown = <h1>System Check<h1>;
-            const unknown = <h1><h1>;
             elfDebugEnzyme.getLast(wrapper, 'h1', true);
 
             expect(wrapper.contains(unknown)).toEqual(true);
