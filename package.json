@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sukhmani/isit320-thukral-2018#readme",
   "dependencies": {
+    "filehound": "^1.16.4",
     "react-styleguidist": "^8.0.2"
   },
   "devDependencies": {
