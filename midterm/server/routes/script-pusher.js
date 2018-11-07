@@ -1,44 +1,34 @@
-var express = require('express');
+import { Router } from 'express';
 
-var router = express.Router();
-
-
-
-/* GET home page. */
-
-/*router.get('/', function(req, res, next) { 'use strict';
-
-  res.render('index', { title: 'server' });
-
-});*/
-
-
+var router = Router();
 
 const spawn = require('child_process').spawn;
 
 
 
-let allData = "";
+let allData = '';
 
 
 
 const copyFile = () => {
 
+    return new Promise(function(resolve, reject) {
 
-
-    return new Promise(function (resolve, reject) {
-
-
-
-        console.log("Copy to EC2", process.env.SETUP_LINUXBOX);
+        console.log('Copy to EC2', process.env.SETUP_LINUXBOX);
 
 
 
-        const pushScript = spawn('scp', [process.env.SETUP_LINUXBOX + '/CpuInfo', 'ec2-bc:/home/ubuntu']);
+        const pushScript = spawn('scp', [
+
+            process.env.SETUP_LINUXBOX + '/CpuInfo',
+
+            'ec2-bc:/home/ubuntu'
+
+        ]);
 
 
 
-        pushScript.stdout.on('data', (data) => {
+        pushScript.stdout.on('data', data => {
 
             console.log(`child stdout:\n${data}`);
 
@@ -50,7 +40,7 @@ const copyFile = () => {
 
 
 
-        pushScript.stderr.on('data', (data) => {
+        pushScript.stderr.on('data', data => {
 
             console.log(`child stderr:\n${data}`);
 
@@ -62,7 +52,7 @@ const copyFile = () => {
 
 
 
-        pushScript.on('close', (code) => {
+        pushScript.on('close', code => {
 
             resolve({
 
@@ -76,7 +66,7 @@ const copyFile = () => {
 
 
 
-        pushScript.on('error', (code) => {
+        pushScript.on('error', code => {
 
             reject({
 
@@ -94,4 +84,12 @@ const copyFile = () => {
 
 
 
-module.exports = router;
+router.get('/copy-file', (request, response) => {
+
+    const result = { result: 'success', objName: 'script-pusher' };
+
+    response.send(result);
+
+});
+
+export default router;
