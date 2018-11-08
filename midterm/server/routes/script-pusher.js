@@ -92,4 +92,12 @@ router.get('/copy-file', (request, response) => {
 
 });
 
+router.get('/RUN-SCRIPT', (request, response) => {
+    'use strict';
+    allData = '';
+    const result = { result: 'success', objName: 'script-pusher' };
+
+    response.send(result);
+
+});
 export default router;
