@@ -150,22 +150,33 @@ class App extends Component {
 
     };
 
+  /*  handleRemote= event => {
+    this.setState({allData: ''});
+    console.log('A name was submitted: ', this.state);
+    this.runScript(
+        this.dataEndPoints[this.state.endPointIndex],
+        this.state.selectedValue
+    );
+    event.preventDefault();
+    };
+*/
+    handleRemote= event => {
+        this.setState({allData: ''});
+        console.log('A name was submitted: ', this.state);
+        this.runScript(
+            this.dataEndPoints[this.state.endPointIndex],
+            this.state.selectedValue
+        );
+        event.preventDefault();
+    };
+}
 
 
     render() {
 
-        const radioWeb = (
-
-
-
+    const radioWeb = (
             <div className="container">
-
-
-
-
-
                 <form onSubmit={this.handleSubmit}>
-
                     <fieldset>
 
 
