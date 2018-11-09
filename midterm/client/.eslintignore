@@ -1,4 +1,5 @@
 **/registerServiceWorker.js
+**/serviceWorker.js
 **/bundle.js
 .git
 **/node_modules/**
