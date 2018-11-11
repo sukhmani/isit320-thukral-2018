@@ -1,4 +1,4 @@
-server express = require('express');
+var express = require('express');
 const getAwsInstanceParams = require('./aws/GetAwsInstanceParams')
 var router = express.Router();
 
