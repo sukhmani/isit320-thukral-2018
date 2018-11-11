@@ -28,3 +28,5 @@ echo -e "Renaming$YELLOW temp.service$NC to $YELLOW$SYSTEMD_PROJECT_NAME.service
 mv temp.service $SYSTEMD_PROJECT_NAME.service
 
 echo -e "If the above looks good, run ./mod-service"
+
+

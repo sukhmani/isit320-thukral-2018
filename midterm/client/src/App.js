@@ -94,13 +94,11 @@ class App extends Component {
         event.preventDefault();
     };
 
-
     render() {
         const radioWeb = (
             <div className="container">
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-
                         <div className="elf-form-field">
                             <legend>Services</legend>
                             <input
@@ -137,9 +135,8 @@ class App extends Component {
         );
         return (
             <div className="App">
-
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
+                    <img src={logo} className="App-logo" alt="logo" />
                     <p>
                         Edit <code>src/App.js</code> and save to reload.
                     </p>
@@ -152,12 +149,9 @@ class App extends Component {
                         Learn React
                     </a>
                 </header>
-                <section>
-                    {radioWeb}
-                </section>
+                <section>{radioWeb}</section>
             </div>
         );
-
     }
 }
 
