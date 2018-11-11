@@ -7,14 +7,14 @@ router.get('/', function(req, res, next) { 'use strict';
   res.render('index', { title: 'server' });
 });
 
-/* Set up a route called foo. */
+/* route called aws educate. */
 router.get('/awsEducate', function(request, response) {
   const awsInstanceParams = getAwsInstanceParams.awsEducate();
   createInstance(awsInstanceParams);
     response.send({result: 'success'});
 });
 
-/* Set up a route called foo. */
+/* route called createWithAWSstandardAccount. */
 router.get('/createWithAwsStandardAccount', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.createWithAwsStandardAccount();
     createInstance(awsInstanceParams);
@@ -34,13 +34,13 @@ router.get('/copyGetStarted', function(request, response) {
     createInstance(awsInstanceParams);
     response.send({result: 'success'});
 });
-/* Set up a route called foo. */
+/* route called runGetStarted. */
 router.get('/runGetStarted', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.runGetStarted();
     createInstance(awsInstanceParams);
     response.send({result: 'success'});
 });
-/* Set up a route called foo. */
+/*route called removeKnownHost. */
 router.get('/removeKnownHost', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.removeKnownHost();
     createInstance(awsInstanceParams);
