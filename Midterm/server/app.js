@@ -6,8 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var ssh-runner  = require('./routes/ssh-runner');
-var script-pusher = require('./routes/script-pusher');
+var sshRunner  = require('./routes/ssh-runner');
+var scriptPusher = require('./routes/script-pusher');
 
 
 
@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/script-pusher', script-pusher);
-app.use('/ssh-runner', ssh-runner);
+app.use('/script-pusher', scriptPusher);
+app.use('/ssh-runner', sshRunner);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
