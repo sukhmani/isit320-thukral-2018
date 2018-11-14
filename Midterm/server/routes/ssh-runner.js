@@ -1,3 +1,6 @@
+const Client = require('ssh2').Client;
+const hostAddress = '23.23.25.214';
+
 let allData = '';
 const runCpuInfo = (hostAddress, response) => {
     var con = new Client();
