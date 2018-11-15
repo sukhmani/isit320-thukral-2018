@@ -6,13 +6,14 @@ router.use(express.static('public'));
 
 //const  routes = require ('./routes');
 
-module.exports = () => {
-    router.get('/', function(req, res) {
-        'use strict';
-        res.render('index', { title: 'server' });
-    });
-};
+//module.exports = () => {
+router.get('/', function(req, res) {
+    'use strict';
+    res.render('index', { title: 'server' });
+});
+//};
 
 //app.listen(PORT, () =>{
-  //  console.log('${PORT}');
+//  console.log('${PORT}');
 //});
+module.exports =  router;
