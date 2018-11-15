@@ -6,7 +6,8 @@ const router = express.Router();
 const spawn = require('child_process').spawn;
 
 let allData = '';
-module.exports = () =>{
+
+
 const check = (request, response, next) => {
     console.log('REQUEST CHECK CALLED', request.query);
     const validOptions = ['CpuInfo', 'VersionCheck', 'uptime'];
@@ -92,5 +93,4 @@ router.get('/check', (request, response) => {
 
     response.send(result);
 });
-//module.exports = router;
-};
+module.exports = router;

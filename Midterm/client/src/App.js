@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,7 +8,9 @@ class App extends Component {
         super(props);
         this.dataEndPoints = [
             '/script-pusher/run-script?script=',
-            '/script-pusher/run-system-tool?script='
+            '/script-pusher/run-system-tool?script=',
+            '/ssh-runner/runCpuUptime?script=',
+            '/ssh-runner/runCpuInfo?script='
         ];
         this.state = {
             allData: '',
@@ -114,7 +117,7 @@ class App extends Component {
                             <input
                                 type="radio"
                                 name="app-choice"
-                                data-endpoint="0"
+                                data-endpoint="1"
                                 value="VersionCheck"
                                 id="elf-radio-version"
                                 onChange={this.handleChange}
@@ -122,6 +125,17 @@ class App extends Component {
                             <label htmlFor="elf-radio-version">
                                 Version Info
                             </label>
+
+                            <input
+                                type="radio"
+                                name="app-choice"
+                                data-endpoint="2"
+                                value="uptime"
+                                id="elf-radio-cpu"
+                                onChange={this.handleChange}
+                            />
+                            <label htmlFor="elf-radio-cpu">CpuInfo</label>
+
                         </div>
 
                         <div className="form-group">
@@ -135,21 +149,27 @@ class App extends Component {
         );
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
+                {/*<header className="App-header">
+*/}
+                    {/*<p>
                         Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
+                    </p>*/}
+                    {/*  <a
                         className="App-link"
                         href="https://reactjs.org"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Learn React
-                    </a>
-                </header>
-                <section>{radioWeb}</section>
+                    </a>*/}
+                {/*</header>*/}
+                <main>
+                    <section>{radioWeb}</section>
+                    {/*<section>{radioRemote}</section>*/}
+                    <section>
+                        <pre id= "output">{this.state.allData}</pre>
+                    </section>
+                </main>
             </div>
         );
     }
