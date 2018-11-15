@@ -1,8 +1,10 @@
 const Client = require('ssh2').Client;
 const hostAddress = '23.23.25.214';
+con
+st elfUtils = require('elven-code').elfUtils;
 
 let allData = '';
-const runCpuInfo = (hostAddress, response) => {
+const runCpuInfo = (hostAddress, identityFile, response) => {
     var con = new Client();
     con.on('ready', function() {
         console.log('Client :: ready');
