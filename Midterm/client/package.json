@@ -25,7 +25,7 @@
         "not ie <= 11",
         "not op_mini all"
     ],
-    "proxy": "http://localhost:30026",
+    "proxy": "http://localhost:30035",
     "devDependencies": {
         "express": "^4.16.4",
         "webpack-cli": "^3.1.2",
