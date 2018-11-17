@@ -1,3 +1,5 @@
+import * as router from 'express';
+
 const routes = require('./routes');
 var createError = require('http-errors');
 var express = require('express');
@@ -28,6 +30,8 @@ app.use('/', routes());
 app.use('/users', usersRouter);
 app.use('/script-pusher', scriptPusher);
 app.use('/ssh-runner', sshRunner);
+//app.use('/index','indexRouter');
+router.use(indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -36,7 +40,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
     'use strict';
     // set locals, only providing error in development
     res.locals.message = err.message;

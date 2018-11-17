@@ -14,7 +14,7 @@ const packageJsonConcurrently = () => {
         .then((json) => {
             console.log('Ensuring package.json contains start-service', JSON.stringify(json, null, 4));
             elfUtils.writeFile((fileName), JSON.stringify(json, null, 4), (result) => {
-                console.log(result)
+                console.log(result);
             });
         })
         .catch((err) => {
@@ -27,13 +27,13 @@ const packageJsonClient = () => {
     elfUtils.readFile(fileName)
         .then((json) => {
             const packageJson = JSON.parse(json.result);
-            packageJson.proxy = "http://localhost:30026";
+            packageJson.proxy = 'http://localhost:30026';
             return packageJson;
         })
         .then((json) => {
             console.log('Ensuring package.json contains start-service', JSON.stringify(json, null, 4));
             elfUtils.writeFile((fileName), JSON.stringify(json, null, 4), (result) => {
-                console.log(result)
+                console.log(result);
             });
         })
         .catch((err) => {

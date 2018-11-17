@@ -27,6 +27,8 @@ const check = (request, response, next) => {
 };
 
 router.use(check);
+router.use(allData);
+
 
 const copyFile = () => {
     return new Promise(function(resolve, reject) {
@@ -71,8 +73,9 @@ const copyFile = () => {
         });
     });
 };
+router.use(copyFile());
 
-router.get('/copy-file', (request, response) => {
+router.get('/copyFile', (request, response) => {
     const result = { result: 'success', objName: 'script-pusher' };
 
     response.send(result);
@@ -94,3 +97,8 @@ router.get('/check', (request, response) => {
     response.send(result);
 });
 module.exports = router;
+/*router.get('/copyFile', function(request, response) {
+    allData = '';
+    runCpuUptime(hostAddress, request.query.script, response);
+//console.log('run-get-started called in ssh-runner', hostAddress);
+});*/
