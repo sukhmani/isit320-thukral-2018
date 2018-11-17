@@ -1,9 +1,9 @@
 //import Router as router from 'express';
-
-let  indexRouter = express.router();
+const express = require('express');
+const indexRouter = express.Router();
 const routes = require('./routes');
 var createError = require('http-errors');
-var express = require('express');
+//var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
