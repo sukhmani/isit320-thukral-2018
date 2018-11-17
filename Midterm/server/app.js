@@ -1,5 +1,6 @@
-import * as router from 'express';
+//import Router as router from 'express';
 
+let  indexRouter = express.router();
 const routes = require('./routes');
 var createError = require('http-errors');
 var express = require('express');
@@ -7,7 +8,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+//var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var sshRunner  = require('./routes/ssh-runner');
 var scriptPusher = require('./routes/script-pusher');
@@ -31,7 +32,7 @@ app.use('/users', usersRouter);
 app.use('/script-pusher', scriptPusher);
 app.use('/ssh-runner', sshRunner);
 //app.use('/index','indexRouter');
-router.use(indexRouter);
+app.use('indexRouter', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
