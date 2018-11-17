@@ -1,10 +1,8 @@
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-
-import React, { Component } from 'react';
-//
-// import logo from './logo.svg';
+import React, {Component} from 'react';
+//import logo from './logo.svg';
 import './App.css';
+import 'whatwg-fetch';
+
 
 class App extends Component {
     runScript = (path, script) => {
