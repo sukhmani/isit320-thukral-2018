@@ -45,7 +45,7 @@ const copyFile = () => {
 
             allData += 'PUSH-SCRIPT: ' + data;
 
-            //console.log('PUSH', data);
+            console.log('PUSH', data);
         });
 
         pushScript.stderr.on('data', data => {

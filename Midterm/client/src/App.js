@@ -4,21 +4,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.dataEndPoints = [
-            '/script-pusher/run-script?script=',
-            '/script-pusher/run-system-tool?script=',
-            '/ssh-runner/runCpuUptime?script=',
-            '/ssh-runner/runCpuInfo?script='
-        ];
-        this.state = {
-            allData: '',
-            selectedValue: '',
-            endPointIndex: 0
-        };
-    }
-
     runScript = (path, script) => {
         const that = this;
         if (!script) {
@@ -56,7 +41,6 @@ class App extends Component {
                 );
             });
     };
-
     handleChange = event => {
         const selectedValue = event.target.value;
         const endPointIndex = event.target.getAttribute('data-endpoint');
@@ -67,7 +51,6 @@ class App extends Component {
             endPointIndex: endPointIndex
         });
     };
-
     handleSubmit = event => {
         this.setState({ allData: '' });
         console.log('A name was submitted: ', this.state);
@@ -96,6 +79,21 @@ class App extends Component {
         );
         event.preventDefault();
     };
+
+    constructor(props) {
+        super(props);
+        this.dataEndPoints = [
+            '/script-pusher/check?script=',
+            '/script-pusher/run-system-tool?script=',
+            '/ssh-runner/runCpuUptime?script=',
+            '/ssh-runner/runCpuInfo?script='
+        ];
+        this.state = {
+            allData: '',
+            selectedValue: '',
+            endPointIndex: 0
+        };
+    }
 
     render() {
         const radioWeb = (
@@ -167,7 +165,7 @@ class App extends Component {
                     <section>{radioWeb}</section>
                     {/*<section>{radioRemote}</section>*/}
                     <section>
-                        <pre id= "output">{this.state.allData}</pre>
+                        <pre id="output">{this.state.allData}</pre>
                     </section>
                 </main>
             </div>
