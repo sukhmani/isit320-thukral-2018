@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
-import ElfHeader from './ElfHeader.js';
+//import ElfHeader from './ElfHeader.js';
 
 
-class App extends Component {
+class RadioLocal extends Component {
     runScript = (path, script) => {
         const that = this;
         if (!script) {
@@ -175,5 +175,5 @@ class App extends Component {
     }
 }
 
-export default App;
+export default RadioLocal;
 //add elf header -- import
