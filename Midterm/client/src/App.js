@@ -84,7 +84,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.dataEndPoints = [
-            '/script-pusher/check?script=',
+            '/script-pusher/run-script?script=',
             '/script-pusher/run-system-tool?script=',
             '/ssh-runner/runCpuUptime?script=',
             '/ssh-runner/runCpuInfo?script='
@@ -102,7 +102,7 @@ class App extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
                         <div className="elf-form-field">
-                            <legend>Services</legend>
+                            <legend id="services">Services</legend>
                             <input
                                 type="radio"
                                 name="app-choice"
