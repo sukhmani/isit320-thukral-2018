@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import 'whatwg-fetch';
+import ElfHeader from './ElfHeader';
 
 
 class RadioLocal extends Component {
@@ -73,7 +74,9 @@ class RadioLocal extends Component {
         this.state = {
             allData: '',
             selectedValue: '',
-            endPointIndex: 0
+            endPointIndex: 0,
+            /* radioWeb: '',*/
+            RadioRemote: ''
         };
     }
 
@@ -127,15 +130,20 @@ class RadioLocal extends Component {
                 </form>
             </div>
         );
+        let RadioRemote;
+        /*var radioWeb;*/
         return (
             <div className="App">
-
+                <ElfHeader />
                 <main>
                     <section>{radioWeb}</section>
-
+                    <RadioRemote/>
+                    {/*<section>{radioRemote}</section>*/}
                     <section>
                         <pre id="output">{this.state.allData}</pre>
                     </section>
+                    <button onClick={this.runFoo}>Run Foo</button>
+                    <p>Foo: {this.state.foo}</p>
                 </main>
             </div>
         );
