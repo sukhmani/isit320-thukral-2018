@@ -61,16 +61,7 @@ class App extends Component {
         );
         event.preventDefault();
     };
-    /*  handleRemote= event => {
-      this.setState({allData: ''});
-      console.log('A name was submitted: ', this.state);
-      this.runScript(
-          this.dataEndPoints[this.state.endPointIndex],
-          this.state.selectedValue
-      );
-      event.preventDefault();
-      };
-  */
+
     handleRemote = event => {
         this.setState({ allData: '' });
         console.log('A name was submitted: ', this.state);
@@ -97,55 +88,15 @@ class App extends Component {
     }
 
     render() {
-        const radioWeb = (
-            <div className="container">
-                <form onSubmit={this.handleSubmit}>
-                    <fieldset>
-                        <div className="elf-form-field">
-                            <legend id="services">Services</legend>
-                            <input
-                                type="radio"
-                                name="app-choice"
-                                data-endpoint="0"
-                                value="CpuInfo"
-                                id="elf-radio-cpu"
-                                onChange={this.handleChange}
-                            />
-                            <label htmlFor="elf-radio-cpu">CpuInfo</label>
 
-                            <input
-                                type="radio"
-                                name="app-choice"
-                                data-endpoint="1"
-                                value="VersionCheck"
-                                id="elf-radio-version"
-                                onChange={this.handleChange}
-                            />
-                            <label htmlFor="elf-radio-version">
-                                Version Info
-                            </label>
-
-                            <input
-                                type="radio"
-                                name="app-choice"
-                                data-endpoint="2"
-                                value="uptime"
-                                id="elf-radio-cpu"
-                                onChange={this.handleChange}
-                            />
-                            <label htmlFor="elf-radio-cpu">CpuInfo</label>
-
-                        </div>
-
-                        <div className="form-group">
-                            <button type="submit" className="btn btn-primary">
-                                Run System Script
-                            </button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        );
+        const radioWeb = (<input
+            type="radio"
+            name="app-choice"
+            data-endpoint="0"
+            value="CpuInfo"
+            id="elf-radio-cpu"
+            onChange={this.handleChange}
+        />);
         return (
             <div className="App">
                 {/*<header className="App-header">
