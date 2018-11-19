@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
-//import ElfHeader from './ElfHeader';
 
-class App extends Component {
+
+class RadioLocal extends Component {
     runScript = (path, script) => {
         const that = this;
         if (!script) {
@@ -61,33 +60,15 @@ class App extends Component {
         );
         event.preventDefault();
     };
-    /*  handleRemote= event => {
-      this.setState({allData: ''});
-      console.log('A name was submitted: ', this.state);
-      this.runScript(
-          this.dataEndPoints[this.state.endPointIndex],
-          this.state.selectedValue
-      );
-      event.preventDefault();
-      };
-  */
-    handleRemote = event => {
-        this.setState({ allData: '' });
-        console.log('A name was submitted: ', this.state);
-        this.runScript(
-            this.dataEndPoints[this.state.endPointIndex],
-            this.state.selectedValue
-        );
-        event.preventDefault();
-    };
+
+
 
     constructor(props) {
         super(props);
         this.dataEndPoints = [
             '/script-pusher/run-script?script=',
-            '/script-pusher/run-system-tool?script=',
-            '/ssh-runner/runCpuUptime?script=',
-            '/ssh-runner/runCpuInfo?script='
+            '/script-pusher/run-system-tool?script='
+
         ];
         this.state = {
             allData: '',
@@ -164,7 +145,7 @@ class App extends Component {
                 {/*</header>*/}
                 <main>
                     <section>{radioWeb}</section>
-                    {/*<section>{radioRemote}</section>*/}
+
                     <section>
                         <pre id="output">{this.state.allData}</pre>
                     </section>
@@ -174,5 +155,6 @@ class App extends Component {
     }
 }
 
-export default App;
+export default RadioLocal;
+
 //add elf header -- import
