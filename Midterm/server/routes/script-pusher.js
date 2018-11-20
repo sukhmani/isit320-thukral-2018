@@ -4,7 +4,6 @@ const router = express.Router();
 //var router = Router();
 
 const spawn = require('child_process').spawn;
-
 let allData = '';
 
 
@@ -27,7 +26,7 @@ const check = (request, response, next) => {
 };
 
 router.use(check);
-router.use(allData);
+//router.use(allData);
 
 
 const copyFile = () => {

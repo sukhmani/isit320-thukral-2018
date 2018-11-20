@@ -89,4 +89,4 @@ router.get('/runCpuInfo', function(request, response) {
 //console.log('run-get-started called in ssh-runner', hostAddress);
 });
 
-module.exports = router();
+module.exports = router;
