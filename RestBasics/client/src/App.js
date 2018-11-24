@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
 //import button from "../../server/public/bower_components/bootstrap/js/src/button";
