@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import 'whatwg-fetch';
-//import button from "../../server/public/bower_components/bootstrap/js/src/button";
+//import '../server/routes/api.js'
+
 
 class App extends Component {
     constructor() {
@@ -14,7 +15,8 @@ class App extends Component {
 
     queryServer = () => {
         const that = this;
-        fetch('/api/foo')
+        fetch("/api/foo")
+        //fetch("/api/api") err:routes ouside src not supported
             .then(function(response) {
                 return response.json();
             })
