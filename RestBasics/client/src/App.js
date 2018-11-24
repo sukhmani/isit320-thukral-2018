@@ -15,7 +15,7 @@ class App extends Component {
 
     queryServer = () => {
         const that = this;
-        fetch("/api/foo")
+        fetch("/api/api")
         //fetch("/api/api") err:routes ouside src not supported
             .then(function(response) {
                 return response.json();
