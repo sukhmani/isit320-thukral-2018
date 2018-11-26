@@ -3,6 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
+"test": "mocha 'test/index-test.js",
         "start": "nodemon ./bin/www",
         "start-service": "node ./bin/www"
     },
@@ -15,5 +16,8 @@
         "morgan": "~1.9.0",
         "pug": "2.0.0-beta11",
         "ssh2": "^0.6.1"
+    },
+    "devDependencies": {
+        "supertest": "^3.3.0"
     }
 }
