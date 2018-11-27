@@ -9,7 +9,7 @@ router.use(express.static('public'));
 //module.exports = () => {
 router.get('/', function(req, res) {
     'use strict';
-    res.render('index', { title: 'server' });
+    res.render('index', { title: 'server', author:'sukhmani' });
 });
 //};
 
