@@ -45,6 +45,6 @@ const runCpuInfo = (hostAddress, response) => {
         )
     });
 };
-runCpuInfo(hostAddress, response);
+
 
 module.exports = router;
