@@ -1,4 +1,4 @@
-var express= require('express');
+var express = require('express');
 const Client = require('ssh2').Client;
 const hostAddress = '23.23.25.214';
 //const elfUtils = require('elven-code').elfUtils;
@@ -43,7 +43,10 @@ const runCpuInfo = (hostAddress, input, response) => {
     var conn = new Client();
     conn.on('ready', function() {
         console.log('Client :: ready');
-        conn.exec('~/Git/JsObjects/Utilities/SetupLinuxBox/' + input, function(err, stream) {
+        conn.exec('~/Git/JsObjects/Utilities/SetupLinuxBox/' + input, function(
+            err,
+            stream
+        ) {
             if (err) throw err;
             stream
                 .on('close', function(code, signal) {
@@ -73,7 +76,6 @@ const runCpuInfo = (hostAddress, input, response) => {
     });
 };
 
-
 //let router = '';
 //runCpuInfo.get('/uptime', function(request, response) {
 //   console.log('run-get-started called in ssh-runner', hostAddress);
@@ -81,12 +83,12 @@ const runCpuInfo = (hostAddress, input, response) => {
 router.get('/runCpuUptime', function(request, response) {
     allData = '';
     runCpuUptime(hostAddress, request.query.script, response);
-//console.log('run-get-started called in ssh-runner', hostAddress);
+    //console.log('run-get-started called in ssh-runner', hostAddress);
 });
 router.get('/runCpuInfo', function(request, response) {
     allData = '';
     runCpuInfo(hostAddress, request.query.script, response);
-//console.log('run-get-started called in ssh-runner', hostAddress);
+    //console.log('run-get-started called in ssh-runner', hostAddress);
 });
 
 module.exports = router;

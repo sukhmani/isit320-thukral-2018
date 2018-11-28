@@ -10,10 +10,8 @@ var logger = require('morgan');
 
 //var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var sshRunner  = require('./routes/ssh-runner');
+var sshRunner = require('./routes/ssh-runner');
 var scriptPusher = require('./routes/script-pusher');
-
-
 
 var app = express();
 

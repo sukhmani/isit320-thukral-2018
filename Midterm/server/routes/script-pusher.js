@@ -6,7 +6,6 @@ const router = express.Router();
 const spawn = require('child_process').spawn;
 let allData = '';
 
-
 const check = (request, response, next) => {
     console.log('REQUEST CHECK CALLED', request.query);
     const validOptions = ['CpuInfo', 'VersionCheck', 'uptime'];
@@ -27,7 +26,6 @@ const check = (request, response, next) => {
 
 router.use(check);
 //router.use(allData);
-
 
 const copyFile = () => {
     return new Promise(function(resolve, reject) {

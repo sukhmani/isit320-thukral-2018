@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
-
 
 class App extends Component {
     runScript = (path, script) => {
@@ -134,7 +133,6 @@ class App extends Component {
                                 onChange={this.handleChange}
                             />
                             <label htmlFor="elf-radio-cpu">CpuInfo</label>
-
                         </div>
 
                         <div className="form-group">
@@ -149,7 +147,7 @@ class App extends Component {
         return (
             <div className="App">
                 {/*<header className="App-header">
-*/}
+                 */}
                 {/*<p>
                         Edit <code>src/App.js</code> and save to reload.
                     </p>*/}

@@ -9,11 +9,11 @@ router.use(express.static('public'));
 //module.exports = () => {
 router.get('/', function(req, res) {
     'use strict';
-    res.render('index', { title: 'server', author:'sukhmani' });
+    res.render('index', { title: 'server', author: 'sukhmani' });
 });
 //};
 
 //app.listen(PORT, () =>{
 //  console.log('${PORT}');
 //});
-module.exports =  router;
+module.exports = router;
