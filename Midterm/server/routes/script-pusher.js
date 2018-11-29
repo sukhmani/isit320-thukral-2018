@@ -70,7 +70,7 @@ const copyFile = () => {
         });
     });
 };
-router.use(copyFile());
+//router.use(copyFile());
 
 router.get('/copyFile', (request, response) => {
     const result = { result: 'success', objName: 'script-pusher' };
