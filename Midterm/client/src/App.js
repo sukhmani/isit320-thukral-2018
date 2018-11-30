@@ -132,7 +132,7 @@ class App extends Component {
                                 id="elf-radio-cpu"
                                 onChange={this.handleChange}
                             />
-                            <label htmlFor="elf-radio-cpu">CpuInfo</label>
+                            <label htmlFor="elf-radio-cpu">Uptime</label>
                         </div>
 
                         <div className="form-group">
