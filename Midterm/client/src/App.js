@@ -84,7 +84,8 @@ class App extends Component {
         super(props);
         this.dataEndPoints = [
             '/script-pusher/run-script?script=',
-            '/script-pusher/run-system-tool?script=',
+            '/ssh-runner/runCpuInfo?script=',
+            //'/script-pusher/run-system-tool?script=',
             '/ssh-runner/runCpuUptime?script=',
             '/ssh-runner/runCpuInfo?script='
         ];
@@ -121,7 +122,7 @@ class App extends Component {
                                 onChange={this.handleChange}
                             />
                             <label htmlFor="elf-radio-version">
-                                Version Info
+                                VersionCheck
                             </label>
 
                             <input

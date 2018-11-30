@@ -43,7 +43,7 @@ const runCpuInfo = (hostAddress, input, response) => {
     var conn = new Client();
     conn.on('ready', function() {
         console.log('Client :: ready');
-        conn.exec('~/Git/JsObjects/Utilities/SetupLinuxBox/' + input, function(
+        conn.exec('/etc/*release', function(
             err,
             stream
         ) {

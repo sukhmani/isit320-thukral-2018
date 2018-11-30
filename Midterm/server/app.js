@@ -1,7 +1,7 @@
 //import Router as router from 'express';
 const express = require('express');
 //const indexRouter = express.Router();
-const routes = require('./routes');
+//const routes = require('./routes');
 var createError = require('http-errors');
 //var express = require('express');
 var path = require('path');
@@ -9,7 +9,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+let users = require('./routes/users');
 var sshRunner = require('./routes/ssh-runner');
 var scriptPusher = require('./routes/script-pusher');
 
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', users);
 app.use('/script-pusher', scriptPusher);
 app.use('/ssh-runner', sshRunner);
 //app.use('/index','indexRouter');

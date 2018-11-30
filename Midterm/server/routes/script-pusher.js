@@ -2,9 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 //var router = Router();
-
-const spawn = require('child_process').spawn;
 let allData = '';
+const spawn = require('child_process').spawn;
 
 const check = (request, response, next) => {
     console.log('REQUEST CHECK CALLED', request.query);
@@ -26,7 +25,7 @@ const check = (request, response, next) => {
 
 router.use(check);
 //router.use(allData);
-
+//let allData = '';
 const copyFile = () => {
     return new Promise(function(resolve, reject) {
         console.log('Copy to EC2', process.env.SETUP_LINUXBOX);
@@ -38,7 +37,7 @@ const copyFile = () => {
         ]);
 
         pushScript.stdout.on('data', data => {
-            console.log(`child stdout:\n${data}`);
+            //console.log(`child stdout:\n${data}`);
 
             allData += 'PUSH-SCRIPT: ' + data;
 
@@ -46,9 +45,8 @@ const copyFile = () => {
         });
 
         pushScript.stderr.on('data', data => {
-            console.log(`child stderr:\n${data}`);
-
-            allData += 'PUSH-SCRIPT: ' + data;
+            // console.log(`child stderr:\n${data}`);
+            allData = 'PUSH-SCRIPT: ' + data;
 
             //console.error('PUSH', data);
         });
@@ -70,11 +68,11 @@ const copyFile = () => {
         });
     });
 };
-//router.use(copyFile());
+router.use(copyFile);
 
 router.get('/copyFile', (request, response) => {
     const result = { result: 'success', objName: 'script-pusher' };
-
+    console.log('Foo called:\n' + JSON.stringify(allData, null, 4));
     response.send(result);
 });
 
@@ -82,7 +80,7 @@ router.get('/RUN-SCRIPT', (request, response) => {
     'use strict';
     allData = '';
     const result = { result: 'success', objName: 'script-pusher' };
-
+    console.log('Foo called:\n' + JSON.stringify(allData, null, 4));
     response.send(result);
 });
 
@@ -90,12 +88,15 @@ router.get('/check', (request, response) => {
     'use strict';
     allData = '';
     const result = { result: 'success', objName: 'script-pusher' };
-
+    console.log('Foo called:\n' + JSON.stringify(allData, null, 4));
     response.send(result);
 });
-module.exports = router;
-/*router.get('/copyFile', function(request, response) {
+
+router.get('/copyFile', function(request, response) {
     allData = '';
+    var hostAddress;
+    var runCpuUptime;
     runCpuUptime(hostAddress, request.query.script, response);
-//console.log('run-get-started called in ssh-runner', hostAddress);
-});*/
+    console.log('run-get-started called in ssh-runner', hostAddress,runCpuUptime);
+});
+module.exports = router;
