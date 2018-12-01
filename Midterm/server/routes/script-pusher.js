@@ -97,7 +97,11 @@ router.get('/copyFile', function(request, response) {
     var hostAddress;
     var runCpuUptime;
     runCpuUptime(hostAddress, request.query.script, response);
-    console.log('run-get-started called in ssh-runner', hostAddress,runCpuUptime);
+    console.log(
+        'run-get-started called in ssh-runner',
+        hostAddress,
+        runCpuUptime
+    );
 });
 /*router.get('/run-system-tool', (request, response) => {
 
