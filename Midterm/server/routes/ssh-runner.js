@@ -83,11 +83,13 @@ const runCpuInfo = (hostAddress, input, response) => {
 router.get('/runCpuUptime', function(request, response) {
     allData = '';
     runCpuUptime(hostAddress, request.query.script, response);
+
     //console.log('run-get-started called in ssh-runner', hostAddress);
 });
 router.get('/runCpuInfo', function(request, response) {
     allData = '';
     runCpuInfo(hostAddress, request.query.script, response);
+
     //console.log('run-get-started called in ssh-runner', hostAddress);
 });
 

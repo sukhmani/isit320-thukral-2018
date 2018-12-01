@@ -32,7 +32,7 @@ const copyFile = () => {
 
         const pushScript = spawn('scp', [
             process.env.SETUP_LINUXBOX + '/CpuInfo',
-
+            /* const pushScript = spawn(process.env.SETUP_LINUXBOX + '/CpuInfo' + script);*/
             'ec2-bc:/home/ubuntu'
         ]);
 
@@ -99,4 +99,7 @@ router.get('/copyFile', function(request, response) {
     runCpuUptime(hostAddress, request.query.script, response);
     console.log('run-get-started called in ssh-runner', hostAddress,runCpuUptime);
 });
+/*router.get('/run-system-tool', (request, response) => {
+
+});*/
 module.exports = router;
