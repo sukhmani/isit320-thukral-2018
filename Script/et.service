@@ -1,19 +1,19 @@
 [Unit]
-Description=Run system service control
+Description=Run elf-tagger
 After=network.target
 
 [Service]
 # ExecStart=/usr/bin/node ./bin/www
 ExecStart=/home/ubuntu/npm/bin/npm run start-service
-WorkingDirectory=/home/ubuntu/bin/ssc
+WorkingDirectory=/home/ubuntu/bin/et
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=nrb
+SyslogIdentifier=elf-tagger
 User=ubuntu
 Group=ubuntu
 Environment=NODE_ENV=production
-Environment=NRB_PORT=30028
+Environment=NRB_PORT=30027
 
 [Install]
 WantedBy=multi-user.target
