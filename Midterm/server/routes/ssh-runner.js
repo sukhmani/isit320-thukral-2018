@@ -37,8 +37,8 @@ const runCpuInfo = (hostAddress, response) => {
 };
 //let router = '';
 //runCpuInfo.get('/uptime', function(request, response) {
- //   console.log('run-get-started called in ssh-runner', hostAddress);
+//   console.log('run-get-started called in ssh-runner', hostAddress);
 //});
 //Router.get('/uptime', function(request, response) {
-  //  console.log('run-get-started called in ssh-runner', hostAddress);
+//  console.log('run-get-started called in ssh-runner', hostAddress);
 //});

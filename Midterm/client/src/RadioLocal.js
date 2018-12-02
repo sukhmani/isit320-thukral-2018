@@ -64,8 +64,6 @@ class RadioLocal extends Component {
         });
     };
 
-   
-
     handleSubmit = event => {
         this.setState({ allData: '' });
         console.log('A name was submitted: ', this.state);

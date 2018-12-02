@@ -6,4 +6,4 @@ export default class ReactBasics extends React.Component {
     }
 }
 const foo = 'abc';
-export {foo};
+export { foo };
