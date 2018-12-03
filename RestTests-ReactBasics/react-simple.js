@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export default class ReactBasics extends React.Component {
-    render() {
-        return <h1>An H1 element in a React Component</h1>;
-    }
+  render() {
+    return <h1>An H1 element in a React Component</h1>;
+  }
 }
-const foo = 'abc';
-export {foo};
+const foo = "abc";
+export { foo };
