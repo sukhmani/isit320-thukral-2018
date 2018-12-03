@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import 'whatwg-fetch';
 import ElfHeader from './ElfHeader';
@@ -83,8 +83,8 @@ class App extends Component {
             allData: '',
             selectedValue: '',
             endPointIndex: 0,
-            RadioRemote:'unknown',
-            radioWeb:'unknown'
+            RadioRemote: 'unknown',
+            radioWeb: 'unknown'
         };
     }
 
@@ -96,8 +96,8 @@ class App extends Component {
                 <ElfHeader />
                 <main>
                     {/*<section>{radioWeb}</section>*/}
-                    <RadioRemote/>
-                    <radioWeb/>
+                    <RadioRemote />
+                    <radioWeb />
                     {/*<section>{radioRemote}</section>*/}
                     <section>
                         <pre id="output">{this.state.allData}</pre>

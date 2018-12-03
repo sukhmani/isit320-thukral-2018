@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import 'whatwg-fetch';
 import ElfHeader from './ElfHeader';
-
 
 class RadioLocal extends Component {
     runScript = (path, script) => {
@@ -62,14 +61,11 @@ class RadioLocal extends Component {
         event.preventDefault();
     };
 
-
-
     constructor(props) {
         super(props);
         this.dataEndPoints = [
             '/script-pusher/run-script?script=',
             '/script-pusher/run-system-tool?script='
-
         ];
         this.state = {
             allData: '',
@@ -118,7 +114,6 @@ class RadioLocal extends Component {
                                 onChange={this.handleChange}
                             />
                             <label htmlFor="elf-radio-cpu">CpuInfo</label>
-
                         </div>
 
                         <div className="form-group">
@@ -137,7 +132,7 @@ class RadioLocal extends Component {
                 <ElfHeader />
                 <main>
                     <section>{radioWeb}</section>
-                    <RadioRemote/>
+                    <RadioRemote />
                     {/*<section>{radioRemote}</section>*/}
                     <section>
                         <pre id="output">{this.state.allData}</pre>
@@ -151,5 +146,3 @@ class RadioLocal extends Component {
 }
 
 export default RadioLocal;
-
-

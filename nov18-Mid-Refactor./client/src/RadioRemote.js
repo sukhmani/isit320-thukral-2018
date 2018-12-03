@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
@@ -88,19 +88,20 @@ class App extends Component {
     }
 
     render() {
-
-        const radioWeb = (<input
-            type="radio"
-            name="app-choice"
-            data-endpoint="0"
-            value="CpuInfo"
-            id="elf-radio-cpu"
-            onChange={this.handleChange}
-        />);
+        const radioWeb = (
+            <input
+                type="radio"
+                name="app-choice"
+                data-endpoint="0"
+                value="CpuInfo"
+                id="elf-radio-cpu"
+                onChange={this.handleChange}
+            />
+        );
         return (
             <div className="App">
                 {/*<header className="App-header">
-*/}
+                 */}
                 {/*<p>
                         Edit <code>src/App.js</code> and save to reload.
                     </p>*/}
