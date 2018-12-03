@@ -76,15 +76,11 @@ class App extends Component {
 
     render() {
         const radioWeb = (
-
             <div className="container">
-
-
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-
                         <div className="elf-form-field">
-                            <legend >Services</legend>
+                            <legend>Services</legend>
                             <input
                                 type="radio"
                                 name="app-choice"
@@ -120,20 +116,20 @@ class App extends Component {
         return (
             <div className="App">
                 <Elfheader>
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Learn React
-                    </a>
-                </header>
+                    <header className="App-header">
+                        <img src={logo} className="App-logo" alt="logo" />
+                        <p>
+                            Edit <code>src/App.js</code> and save to reload.
+                        </p>
+                        <a
+                            className="App-link"
+                            href="https://reactjs.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Learn React
+                        </a>
+                    </header>
                 </Elfheader>
             </div>
         );
