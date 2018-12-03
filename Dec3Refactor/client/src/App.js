@@ -97,12 +97,10 @@ class App extends Component {
     }
 
     render() {
-        const radioLocal = (
-
+        const radioWeb = (
             <div className="container">
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-
                         <div className="elf-form-field">
                             <legend id="services">Services</legend>
                             <input
@@ -164,13 +162,13 @@ class App extends Component {
                     </a>*/}
                 {/*</header>*/}
                 <main>
-                    <section>{radioLocal}</section>
+                    <section>{radioWeb}</section>
                     {/*<section>{radioRemote}</section>*/}
                     <section>
                         <pre id="output">{this.state.allData}</pre>
-                        <radioLocal />
+                        <radioWeb />
                         const radioRemote;
-                        <radioRemote/>
+                        <radioRemote />
                     </section>
                     <button onClick={this.runFoo}>Run Foo</button>
                     <p>Foo: {this.state.foo}</p>
