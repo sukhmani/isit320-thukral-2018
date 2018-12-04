@@ -16,4 +16,8 @@ router.get('/', function(req, res) {
 //app.listen(PORT, () =>{
 //  console.log('${PORT}');
 //});
+router.get('/foo', (request, response) => {
+    'use strict';
+    response.send({ file: 'api.js',  result: 'success', status: 'bar' });
+});
 module.exports = router;
