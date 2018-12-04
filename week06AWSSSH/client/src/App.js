@@ -3,7 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            allData: 'unknown'
+        };
+    }
     callCpuInfo = () => {
+        //const that
         fetch('/')
             .then(function(response) {
                 return response.json();
@@ -23,7 +31,7 @@ class App extends Component {
         return (
             <div className="App">
                 {/*<header className="elf-jsx-start">*/}
-                <header className="App-header">
+                <header>
                     {/*elf-jsx-start*/}
 
                     <img src={logo} className="App-logo" alt="logo" />
