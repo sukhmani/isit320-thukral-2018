@@ -11,7 +11,7 @@ import 'whatwg-fetch';
                 </header>
             </div>
         );*/
-        /* return (
+/* return (
             <div className="App">
 
                 <main>
@@ -23,8 +23,8 @@ import 'whatwg-fetch';
                 </main>
             </div>
         );*/
-    }
-}
+/* }
+}*/
 
 
 
