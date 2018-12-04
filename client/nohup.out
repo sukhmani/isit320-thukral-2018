@@ -1,0 +1,15 @@
+internal/modules/cjs/loader.js:582
+    throw err;
+    ^
+
+Error: Cannot find module '/home/bcuser/Git/isit320-thukral-2018/client/package.json'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:580:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:506:25)
+    at Module.require (internal/modules/cjs/loader.js:636:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at getPublicUrl (/home/bcuser/Git/isit320-thukral-2018/client/node_modules/react-scripts/config/paths.js:34:19)
+    at Object.<anonymous> (/home/bcuser/Git/isit320-thukral-2018/client/node_modules/react-scripts/config/paths.js:63:14)
+    at Module._compile (internal/modules/cjs/loader.js:688:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:699:10)
+    at Module.load (internal/modules/cjs/loader.js:598:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:537:12)
