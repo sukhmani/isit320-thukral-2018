@@ -7,12 +7,21 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state={
-            allData: 'unknown'
+            allData: '',
         };
     }
-    callCpuInfo = () => {
-        //const that
-        fetch('/')
+    runCpuInfo = () => {
+        /*const that = this;
+        that.setState({ allData: 'abc' });*/
+        fetch('mockData.json')
+        //that.setState(mock-data => (json));
+            .then(function (json) {
+
+                console.log('parsed json', json);
+                /* // that.setState({ firstName: 'abc' });*/
+
+
+            })
             .then(function(response) {
                 return response.json();
             })
@@ -25,6 +34,7 @@ class App extends Component {
                 );
                 console.log(JSON.stringify(ex, null, 4));
             });
+
     };
 
     render() {
@@ -50,7 +60,7 @@ class App extends Component {
                     <p className="byline">by Sukhmani t </p>
 
                     <main>
-                        <button onClick={this.callCpuInfo}>callCpuInfo</button>
+                        <button onClick={this.runCpuInfo}>callCpuInfo</button>
                     </main>
                 </header>
                 <footer>
