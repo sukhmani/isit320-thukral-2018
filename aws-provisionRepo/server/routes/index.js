@@ -7,6 +7,17 @@ router.get('/', function(req, res) {
     'use strict';
     res.render('index', { title: 'server' });
 });
+router.get('/foo', function(req, res) {
+
+    'use strict';
+
+    res.send({ title: 'RestExpress', query: req.query, params: req.params });
+
+});
+
+function createInstance(awsInstanceParams) {
+
+}
 
 /* route called aws educate. */
 router.get('/awsEducate', function(request, response) {
@@ -28,7 +39,7 @@ router.get('/associateElasticIp', function(request, response) {
     createInstance(awsInstanceParams);
     response.send({ result: 'success' });
 });
-module.exports = router;
+
 /* Set up a route called foo. */
 router.get('/copyGetStarted', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.copyGetStarted();
