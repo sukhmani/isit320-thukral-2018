@@ -32,6 +32,8 @@ class App extends Component {
 
             endPointIndex: 0
 
+
+
         };
 
     }
@@ -54,22 +56,29 @@ class App extends Component {
 
                 console.log('parsed json', json);
 
-                const query = Object.keys(json.query).map(function(key) {
+                const q = Object.keys(json.q).map(function(key) {
 
-                    return [key, ' ', json.query[key], ' '];
+                    return [key, ' ', json.q[key], ' '];
 
                 });
 
                 that.setState({
 
-                    allData: json.title,
+                    /*allData: json.title,
 
                     selectedValue: query,
 
-                    endPointIndex: json.query.count,
-                    //queryBar: json.query.bar,
+                    endPointIndex: json.query.count,*/
 
-                    //params: JSON.stringify(json.params),
+                    title: json.title,
+
+                    q: q,
+
+                    queryBar: json.q.bar,
+
+                    queryCount: json.q.count,
+
+                    params: JSON.stringify(json.params),
 
                 });
 
@@ -105,18 +114,18 @@ class App extends Component {
 
                 console.log('parsed json', json);
 
-                const query = Object.keys(json.query).map(function(key) {
+                const q = Object.keys(json.q).map(function(key) {
 
-                    return [key, ' ', json.query[key], ' '];
+                    return [key, ' ', json.q[key], ' '];
 
                 });
 
                 that.setState({
-                    allData: json.title,
+                    allData: json.allData,
 
-                    selectedValue: query,
+                    selectedValue: q,
 
-                    endPointIndex: json.query.count,
+                    endPointIndex: json.q.endPointIndex,
 
                     /*title: json.title,
 
@@ -159,15 +168,16 @@ class App extends Component {
                     <h1>AWS Provision </h1>
 
 
-                    {/*<p>Title: {this.state.title}</p>
+                    <p>AllData: {this.state.allData}</p>
 
-                    <p>Query: {this.state.query}</p>
+                    <p>selectedValue: {this.state.selectedValue}</p>
 
-                    <p>Query Bar: {this.state.queryBar}</p>
+                    <p>endPointIndex: {this.state.endPointIndex}</p>
 
-                    <p>Query Count: {this.state.queryCount}</p>
+                    {/*   <p>Query Count: {this.state.queryCount}</p>
 
                     <p>Params: {this.state.params}</p>*/}
+
 
                 </header>
 
