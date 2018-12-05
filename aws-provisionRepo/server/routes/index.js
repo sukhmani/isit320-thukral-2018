@@ -3,7 +3,7 @@ const getAwsInstanceParams = require('./aws/GetAwsInstanceParams');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     'use strict';
     res.render('index', { title: 'server' });
 });
