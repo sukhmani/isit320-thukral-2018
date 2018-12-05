@@ -16,7 +16,7 @@ import Elfheader from './Elfheader';
 
 <header>
 
-    <h1>System Check</h1>
+    <h1>AWS Provision</h1>
 
     <p className="byline">Sukhmani t </p>
 
