@@ -2,7 +2,7 @@
     "name": "client",
     "version": "0.1.0",
     "private": true,
-    "proxy": "http://localhost:30035",
+    "proxy": "http://localhost:30036",
     "dependencies": {
         "elven-code": "^4.5.0",
         "react": "^16.5.2",
