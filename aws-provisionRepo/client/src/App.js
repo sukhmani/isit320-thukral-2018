@@ -180,12 +180,14 @@ class App extends Component {
 
     //}
 
+
     state = {users: [],
         value: [],
         created: [],
         Associated: [],
         Copied:[],
-        Started:[]
+        Started:[],
+        Reboot:[]
 
     }
 
@@ -366,7 +368,7 @@ class App extends Component {
                     <hr/>
                     <button
                         onClick={() => this.setState({ Started: '    Started '})}
-                    > copy the GetStarted Script
+                    >run the GetStarted Script on EC2
                         {this.state.Started}
                     </button>
 
@@ -380,7 +382,7 @@ class App extends Component {
                     <hr/>
                     <button onClick={this.removeKnownHost}>remove from Known Host</button>
                     <button onClick={this.removeKnownHost}>get instance status</button>
-                    <button onClick={this.removeKnownHost}>reboot instance</button>
+                    <button onClick={() => this.setState({ Reboot: '    :Done '})}>reboot instance</button>
 
 {/*<button onClick={
     this.state.users.map(users =>
