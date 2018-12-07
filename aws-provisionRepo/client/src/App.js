@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { Component } from 'react';
 import './App.css';
 import 'whatwg-fetch';
@@ -6,10 +7,150 @@ import ElfHeader from './ElfHeader';
 //var React = require('react');
 
 class App extends Component {
+    runScript = (path, script) => {
 
+        const that = this;
+
+        if (!script) {
+
+            return;
+
+        }
+
+        fetch(path + script)
+
+            .then(function(response) {
+
+                return response.json();
+
+            })
+
+            .then(function(json) {
+
+                console.log('allData', json.allData);
+
+                console.log('result', json.result);
+
+                console.log('code', json.code);
+
+                console.log('error', json.error);
+
+                let info = '';
+
+                if (json.result === 'error') {
+
+                    info = json.error;
+
+                } else if (script === 'CpuInfo') {
+
+                    var regex1 = RegExp('model name.*', 'g');
+
+                    let array1 = regex1.exec(json.allData);
+
+                    while (array1 !== null) {
+
+                        info += array1[0] + '\n';
+
+                        console.log(`Found ${array1[0]}.`);
+
+                        array1 = regex1.exec(json.allData);
+
+                    }
+
+                } else {
+
+                    info = json.allData;
+
+                }
+
+                that.setState({ allData: info });
+
+            })
+
+            .catch(function(ex) {
+
+                console.log(
+
+                    'parsing failed, URL bad, network down, or similar',
+
+                    ex
+
+                );
+
+            });
+
+    };
+
+    handleChange = event => {
+
+        const selectedValue = event.target.value;
+
+        const endPointIndex = event.target.getAttribute('data-endpoint');
+
+        console.log('HANDLE CHANGE', selectedValue);
+
+        this.setState({
+
+            ...this.state,
+
+            selectedValue: selectedValue,
+
+            endPointIndex: endPointIndex
+
+        });
+
+    };
+
+    handleSubmit = event => {
+
+        this.setState({ allData: '' });
+
+        console.log('A name was submitted: ', this.state);
+
+        this.runScript(
+
+            this.dataEndPoints[this.state.endPointIndex],
+
+            this.state.selectedValue
+
+        );
+
+        event.preventDefault();
+
+    };
     constructor(props) {
 
         super(props);
+
+        this.dataEndPoints = [
+
+            '/script-pusher/run-script?script=',
+
+            '/ssh-runner/runCpuInfo?script=',
+
+            //'/script-pusher/run-system-tool?script=',
+
+            '/ssh-runner/runCpuUptime?script=',
+
+            '/ssh-runner/runCpuInfo?script='
+
+        ];
+
+        this.state = {
+
+            allData: '',
+
+            selectedValue: '',
+
+            endPointIndex: 0
+
+        };
+
+    }
+
+   /* constructor(props) {
+
+        super(props);*/
 
         /*   this.dataEndPoints = [
 
@@ -25,27 +166,41 @@ class App extends Component {
 
         ];*/
 
-        this.state = {
+        /*this.state = {
 
-            allData: '',
+            value: null,
 
-            selectedValue: '',
+            users:[] ,
 
             endPointIndex: 0
 
 
 
-        };
+        };*/
+
+    //}
+
+    state = {users: [],
+        value: [],
+        created: [],
+        Associated: [],
+        Copied:[],
+        Started:[]
 
     }
 
+    a = ()=> {
+        fetch('./users')
 
+            .then(res => res.json())
+            .then(users => this.setState({ users }));
+    }
 
     createEducate = () => {
 
         const that = this;
 
-        fetch('/createEducate?bar=qux&count=5')
+        fetch('aws/createEducate')
 
             .then(function(response) {
 
@@ -71,15 +226,11 @@ class App extends Component {
 
                     endPointIndex: json.query.count,*/
 
-                    title: json.title,
+                    user: json.user,
 
-                    q: q,
-
-                    queryBar: json.q.bar,
-
-                    queryCount: json.q.count,
-
+                    value: q,
                     params: JSON.stringify(json.params),
+
 
                 });
 
@@ -162,50 +313,90 @@ class App extends Component {
         return (
 
 
+
+
             <div className="App">
 
-<<<<<<< HEAD
-                <ElfHeader/>
-=======
-
-                {/* <p className="Elfheader">AWS Provision</p>*/}
-                {/* <h1>AWS Provision </h1>
 
 
-                    <p>AllData: {this.state.allData}</p>
 
-                    <p>selectedValue: {this.state.selectedValue}</p>
 
-                    <p>endPointIndex: {this.state.endPointIndex}</p>*/}
-
-                {/*   <p>Query Count: {this.state.queryCount}</p>
-
-                    <p>Params: {this.state.params}</p>*/}
 
 
                 <ElfHeader />
->>>>>>> 7209da5927cc71906a8e27fb765a7bbe89acd0b0
-
                 <main>
+                    <button
 
-                    <button onClick={this.createWithAwsStandardAccount}>createWithAwsStandardAccount</button>
-                    <button onClick={this.createEducate}>create with AWS Educate Account</button>
+                        onClick={() => this.setState({ value: '    created ' })}
+                    > createWithAwsStandardAccount
+                        {this.state.value}
+                    </button>
 
-                    <button onClick={this.associateElasticIp}>associate Elastic Ip</button>
+                    <button
+
+                        onClick={() => this.setState({ users: '    created '})}
+                    > createWithAwsStandardAccount
+                        {this.state.users}
+                    </button>
+
+                    <button
+
+                        onClick={() => this.setState({ created: '    created  '})}
+                    > create with AWS Educate Account
+                        {this.state.created}
+                    </button>
+
+                    <button
+                    onClick={() => this.setState({ Associated: '    Associated '})}
+                    > associate Elastic Ip
+                    {this.state.Associated}
+                </button>
+
+
+
                     <hr/>
-                    <button onClick={this.copyGetStarted}>copy the GetStarted Script</button>
+
+                    <button
+                        onClick={() => this.setState({ Copied: '    Copied '})}
+                    > copy the GetStarted Script
+                        {this.state.Copied}
+                    </button>
+
+
                     <hr/>
-                    <button onClick={this.runGetStarted}>run the GetStarted script on EC2</button>
+                    <button
+                        onClick={() => this.setState({ Started: '    Started '})}
+                    > copy the GetStarted Script
+                        {this.state.Started}
+                    </button>
+
                     <button onClick={this.removeKnownHost}>run the RunUbuntuSetup Script on EC2</button>
+                    <button
+                        onClick={() => this.setState({ Removed: '    Removed '})}
+                    > removeKnownHost
+                        {this.state.Removed}
+                    </button>
+
                     <hr/>
                     <button onClick={this.removeKnownHost}>remove from Known Host</button>
                     <button onClick={this.removeKnownHost}>get instance status</button>
                     <button onClick={this.removeKnownHost}>reboot instance</button>
 
+{/*<button onClick={
+    this.state.users.map(users =>
+     key={users.id}>{users.username}
+)
+}>users</button>*/}
 
                 </main>
 
+
+
                 <footer>
+
+
+
+
 
                     <p>&copy; by Sukhmani t</p>
 

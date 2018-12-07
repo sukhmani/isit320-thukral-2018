@@ -1,5 +1,5 @@
 var express = require('express');
-const getAwsInstanceParams = require('./aws/GetAwsInstanceParams');
+// const getAwsInstanceParams = require('./aws/GetAwsInstanceParams');
 var router = express.Router();
 
 /* GET home page. */
@@ -17,14 +17,15 @@ router.get('/foo', function(req, res) {
 
 
 
-/* route called aws educate. */
-router.get('/awsEducate', function(request, response) {
-//    createInstance(awsInstanceParams);
-    response.send({ result: 'success', route: '/awsEducate' });
-});
 
-/* route called createWithAWSstandardAccount. */
-router.get('/createWithAwsStandardAccount', function(request, response) {
+router.get('/createEducate', function(request, response) {
+//    createInstance(awsInstanceParams);
+    response.send({ result: 'success', route: '/createEducate' });
+});
+module.exports = router;
+
+/*
+let withAwsStandardAccount = router.get('/createWithAwsStandardAccount', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.createWithAwsStandardAccount();
     // createInstance(awsInstanceParams);
     response.send({ result: 'success',
@@ -32,29 +33,29 @@ router.get('/createWithAwsStandardAccount', function(request, response) {
     });
 });
 module.exports = router;
-/* Set up a route called foo. */
+/!* Set up a route called foo. *!/
 router.get('/associateElasticIp', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.associateElasticIp();
     createInstance(awsInstanceParams);
     response.send({ result: 'success' });
 });
 
-/* Set up a route called foo. */
+/!* Set up a route called foo. *!/
 router.get('/copyGetStarted', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.copyGetStarted();
     createInstance(awsInstanceParams);
     response.send({ result: 'success' });
 });
-/* route called runGetStarted. */
+/!* route called runGetStarted. *!/
 router.get('/runGetStarted', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.runGetStarted();
     createInstance(awsInstanceParams);
     response.send({ result: 'success' });
 });
-/*route called removeKnownHost. */
-router.get('/removeKnownHost', function(request, response) {
+/!*route called removeKnownHost. *!/
+let removeKnownHost = router.get('/removeKnownHost', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.removeKnownHost();
-    createInstance(awsInstanceParams);
+    //createInstance(awsInstanceParams);
     response.send({ result: 'success' });
-});
-module.exports = router;
+});*/
+
