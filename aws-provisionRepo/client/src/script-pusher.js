@@ -2,10 +2,6 @@ const express = require('express');
 
 const router = express.Router();
 
-
-
-//var router = Router();
-
 let allData = '';
 
 const spawn = require('child_process').spawn;
