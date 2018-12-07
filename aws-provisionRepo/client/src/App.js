@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'whatwg-fetch';
+import ElfHeader from './ElfHeader';
 //import './Elfheader.js';
 //var React = require('react');
 
@@ -154,22 +155,7 @@ class App extends Component {
 
             <div className="App">
 
-                <header>
-                    {/* <p className="Elfheader">AWS Provision</p>*/}
-                    <h1>AWS Provision </h1>
-
-
-                    {/*<p>Title: {this.state.title}</p>
-
-                    <p>Query: {this.state.query}</p>
-
-                    <p>Query Bar: {this.state.queryBar}</p>
-
-                    <p>Query Count: {this.state.queryCount}</p>
-
-                    <p>Params: {this.state.params}</p>*/}
-
-                </header>
+                <ElfHeader/>
 
                 <main>
 
