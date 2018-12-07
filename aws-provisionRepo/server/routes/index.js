@@ -15,22 +15,21 @@ router.get('/foo', function(req, res) {
 
 });
 
-function createInstance(awsInstanceParams) {
 
-}
 
 /* route called aws educate. */
 router.get('/awsEducate', function(request, response) {
-    const awsInstanceParams = getAwsInstanceParams.awsEducate();
-    createInstance(awsInstanceParams);
-    response.send({ result: 'success' });
+//    createInstance(awsInstanceParams);
+    response.send({ result: 'success', route: '/awsEducate' });
 });
 
 /* route called createWithAWSstandardAccount. */
 router.get('/createWithAwsStandardAccount', function(request, response) {
     const awsInstanceParams = getAwsInstanceParams.createWithAwsStandardAccount();
-    createInstance(awsInstanceParams);
-    response.send({ result: 'success' });
+    // createInstance(awsInstanceParams);
+    response.send({ result: 'success',
+        route:'getAwsInstanceParams'
+    });
 });
 module.exports = router;
 /* Set up a route called foo. */
